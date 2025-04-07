@@ -1,0 +1,59 @@
+﻿@inject AuthenticationStateProvider authProvider
+@inject NavigationManager navManager
+@inject IJSRuntime IjsRuntime
+@* @rendermode InteractiveServer *@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="ActivityChecker.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <HeadOutlet />
+</head>
+
+<body>
+    <noscript>
+        <style>
+            .blazor-container {
+                display: none;
+            }
+        </style>
+        <div>
+            <h2>JavaScript Required</h2>
+            <p>This application requires JavaScript to be enabled in your browser. Please enable JavaScript and refresh the page.</p>
+        </div>
+    </noscript>
+    <CascadingAuthenticationState>
+        <Router AppAssembly="@typeof(App).Assembly">
+            <Found Context="routeData">
+                <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            </Found>
+            <NotFound>
+                <CascadingAuthenticationState>
+                    <LayoutView Layout="@typeof(MainLayout)">
+                        <p>Sorry, there's nothing at this address.</p>
+                    </LayoutView>
+                </CascadingAuthenticationState>
+            </NotFound>
+        </Router>
+    </CascadingAuthenticationState>
+    <script src="_framework/blazor.web.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+@code {
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await ((TokenAuthenticationStateProvider)authProvider).InitializeJsRuntime();
+    }
+}

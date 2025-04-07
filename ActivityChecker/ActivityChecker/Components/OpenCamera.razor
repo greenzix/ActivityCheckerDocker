@@ -1,0 +1,36 @@
+﻿@page "/camera"
+@rendermode InteractiveServer
+
+@inject IJSRuntime JSRuntime
+
+<h3>Camera Scanner</h3>
+
+<button @onclick="Open">Open Camera</button>
+<div id="camera-container">
+    <video id="video-element" autoplay style="width: 100%; height: auto; border: 1px solid black;"></video>
+</div>
+<p>Scanned Code: @ScannedCode</p>
+
+@code {
+    private string ScannedCode { get; set; }
+
+    private DotNetObjectReference<OpenCamera> dotNetObjRef;
+
+    private async Task Open()
+    {
+        dotNetObjRef = DotNetObjectReference.Create(this);
+        await JSRuntime.InvokeVoidAsync("cameraScanner.startScanning", "video-element", dotNetObjRef);
+    }
+
+    [JSInvokable("SetScannedCode")]
+    public void SetScannedCode(string code)
+    {
+        ScannedCode = code;
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        dotNetObjRef?.Dispose();
+    }
+}

@@ -1,0 +1,50 @@
+﻿@page "/register"
+@using System.Text
+@using System.Text.Json
+@inject NavigationManager navManager
+@inject ActivityService actiityService
+@inject UserService userService
+@layout LoginLayout
+@rendermode InteractiveServer
+
+
+<div class="container px-5">
+    <div class="card shadow p-4">
+        <h3 class="text-center mb-4">Register</h3>
+        <div class="form-group mb-3">
+            <label for="username" class="form-label">Name</label>
+            <input id="username" class="form-control" placeholder="Enter your username" @bind-value="Name" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Enter your password" @bind-value="Password" />
+        </div>
+        <button @onclick="HandleRegister" class="btn btn-primary w-100">Register</button>
+    </div>
+</div>
+
+
+
+@code {
+
+    [Inject] private AuthenticationStateProvider AuthState { get; set; }
+    private string Name { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;   
+
+    private System.Security.Claims.ClaimsPrincipal user;
+
+
+    private async Task HandleRegister()
+    {
+        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Password)) return;
+        LoginDTO dTO = new LoginDTO { name = Name, password = Password  };
+        await actiityService.CreateAccount(dTO);
+        string? token = await userService.GetToken(dTO);
+        if (token == null) return;
+        await ((TokenAuthenticationStateProvider)AuthState).MarkUserAsAuthenticated(token);
+        navManager.NavigateTo("/",true);
+    }
+
+
+  
+}

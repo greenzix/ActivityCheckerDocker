@@ -1,0 +1,238 @@
+﻿@page "/rooms/{roomId:int}"
+@using ActivityCheckerApi.Models.Entities
+
+@* @attribute [Authorize] *@
+@inject AuthenticationStateProvider AuthStateProvider
+@inject RoomService service
+@inject IJSRuntime js
+@rendermode InteractiveServer
+@inject NavigationManager navManager
+@inject ActivityService acService
+
+@if(roomName == string.Empty)
+{
+	<p>Loading...</p>
+}
+else
+{
+	<CascadingAuthenticationState>
+		<AuthorizeView Roles="User">
+			<Authorized>
+				<div class="mt-2">
+					<h1 class="fw-bold">@roomName</h1>
+				</div>
+
+				<div class="mt-4">
+					<h3 class="fw-bold">My Activity:</h3>
+				</div>
+
+
+				<div class="mt-3 ">
+					<div class="backborder bg-dark">
+						@if (!hasRoomPresence)
+						{
+							<div class="p-3">
+								<p class="fw-bold text-light">Join with PIN</p>
+								<input class="entryBorder" @bind-value="roomCode" type="text" />
+								<button type="button" @onclick="JoinRoom" class=" btn btn-light">Submit</button>
+							</div>
+							@* 	<div class="ps-3 pt-3 pb-3">
+								<p class="fw-bold text-light">Scan QR code</p>
+								<button type="button" class="btn btn-light">Open Camera</button>
+							</div>
+ *@
+
+							@if (order.permission == Permission.Admin)
+							{
+								<div class="ps-3 pt-3 pb-3">
+									<p class="fw-bold text-light">Room's history</p>
+									<button type="button" @onclick="OpenRoomHistory" class="btn btn-light">History</button>
+
+								</div>
+
+								<div class="ps-3 pt-3 pb-3">
+									<p class="fw-bold text-light">Members</p>
+									<button type="button" @onclick="ViewMembers" class="btn btn-light">View all</button>
+								</div>
+							}
+							@if (User !=null)
+							{
+								if (order.permission != Permission.Admin && User.User.IsInRole("Admin"))
+								{
+									<div class="ps-3 pt-3 pb-3">
+										<p class="fw-bold text-light">Become room Admin</p>
+										<button type="button" @onclick="BecomeAdmin" class="btn btn-light">Get Admin</button>
+									</div>
+								}
+							}
+						}
+						else
+						{
+							<div class="ps-3 pt-3">
+								<p class="fw-bold text-light">Currently in @presentRoomName</p>
+							</div>
+
+
+							<div class="ps-3 pt-3 pb-1">
+								<h6 class="text-light">Session expires at: @currPresence.expiresAt.ToString("HH:mm")</h6>
+							</div>
+
+							<div class="ps-3 pt-3 pb-3">
+								<button type="button" @onclick=LeaveRoom class="btn btn-danger">Leave</button>
+								@if (order.permission == Permission.Admin)
+								{
+									<button type="button" @onclick="OpenRoomHistory" class="btn btn-light ms-2">History</button>
+									<button type="button" @onclick="ViewMembers" class="btn btn-light ms-2">View Members</button>
+								}
+							</div>
+						}
+					</div>
+				</div>
+
+
+
+				<div class="mt-4">
+					<h3 class="fw-bold">@roomName Activity:</h3>
+				</div>
+
+				<div class="mt-3">
+					<ul class="list-group">
+
+						@foreach (User user in RoomPresenceUsers)
+						{
+
+							<li class="list-group-item">@user.name</li>
+
+						}
+
+						@if (RoomPresenceUsers.Count == 0)
+						{
+							<p class="fw-bold opacity-75">There is no current activity</p>
+						}
+					</ul>
+				</div>
+			</Authorized>
+		</AuthorizeView>
+
+		<AuthorizeView Roles="Tablet">
+			<TabletNavigation />
+		</AuthorizeView>
+	</CascadingAuthenticationState>
+
+	<AuthenticationRedirect />
+}
+
+
+@code {
+
+
+
+	[Parameter] public int roomId { get; set; } = 0;
+
+	List<User> RoomPresenceUsers = new List<User>();
+	RoomOrder? order;
+
+	string roomName { get; set; } = string.Empty;
+	string presentRoomName { get; set; } = string.Empty;
+
+	string roomCode { get; set; } = string.Empty;
+
+	bool hasRoomPresence { get; set; } = false;
+
+	AuthenticationState? User { get; set; }
+
+	RoomPresence? currPresence;
+
+
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			User = await AuthStateProvider.GetAuthenticationStateAsync();
+
+			// //Ce je tablca navigata na code
+			// if (authState.User.IsInRole("Tablet")) navManager.NavigateTo($"{navManager.Uri}code");
+
+			currPresence = await GetRoomPresenceUser();
+			if (currPresence != null)
+			{
+				hasRoomPresence = true;
+				presentRoomName = await service.GetRoomName(currPresence.roomId);
+			}
+			order = await service.GetRoomOrder(roomId);
+			if (order == null)
+			{
+				navManager.NavigateTo("/");
+			}
+
+			RoomPresenceUsers = await GetRoomPresencesAsync();
+			roomName = await service.GetRoomName(roomId);
+
+			StateHasChanged();
+
+		}
+	}
+
+	public async Task JoinRoom()
+	{
+		if (string.IsNullOrEmpty(roomCode)) return;
+		bool result = await acService.JoinRoom(roomId,roomCode);
+		if(result)
+		{
+			roomCode = string.Empty;
+			navManager.NavigateTo(navManager.Uri, true);
+		}
+	}
+
+	private async Task LeaveRoom()
+	{
+		bool result = await acService.LeaveRoom(roomId);
+		if(result)
+		{
+			hasRoomPresence = false;
+			currPresence = null;
+			navManager.NavigateTo(navManager.Uri, true);
+		}
+	}
+
+	public async Task BecomeAdmin()
+	{
+		bool result = await service.BecomeRoomAdmin(roomId);
+		if (result) navManager.NavigateTo(navManager.Uri, true);
+	}
+
+	private void OpenRoomHistory()
+	{
+		navManager.NavigateTo($"{navManager.Uri}history");
+	}
+
+
+	private void ViewMembers()
+	{
+		navManager.NavigateTo($"{navManager.Uri}members");
+
+	}
+
+	async Task<List<User>> GetRoomPresencesAsync()
+	{
+		List<RoomPresence>? presences = await acService.GetPresenceInRoom(roomId);
+		if (presences == null) return new List<User>();
+		List<User>? userList = new List<User>();
+		foreach(RoomPresence x in presences)
+		{
+			userList.Add(await acService.GetUserById(x.userId) ?? new User());
+		}
+		return userList;
+	}
+
+
+
+	async Task<RoomPresence> GetRoomPresenceUser()
+	{	
+		return await acService.GetPresence() ?? null;
+	}
+
+
+
+}

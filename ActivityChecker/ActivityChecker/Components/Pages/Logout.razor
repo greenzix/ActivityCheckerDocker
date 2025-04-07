@@ -1,0 +1,19 @@
+﻿@page "/logout"
+@inject AuthenticationStateProvider authProvider
+@inject NavigationManager navManager
+@rendermode InteractiveServer
+
+@code {
+
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if(firstRender)
+		{
+			await((TokenAuthenticationStateProvider)authProvider).MarkUserAsLoggedOut();
+			await Task.Delay(100);
+			navManager.NavigateTo("/login",true);
+		}
+	}
+
+}

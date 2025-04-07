@@ -1,0 +1,48 @@
+﻿@page "/teacher-history"
+@using ActivityCheckerApi.Models.Entities
+@inject ActivityService activityService
+@rendermode InteractiveServer
+
+@if (activities != null)
+{
+	<div>
+		<div class="mt-2">
+			<h1 class="fw-bold">All History:</h1>
+		</div>
+
+		<div class="mt-4">
+			@foreach (var group in activities.GroupBy(ac => ac.date.Date))
+			{
+				<h3 class="mt-3 fw-bold">@group.Key.ToString("dd.MM.yyyy")</h3>
+
+				<ul class="list-group">
+					@foreach (var ac in group)
+					{
+						<li class="list-group-item @((ac.action == Models.Action.Join) ? "bg-success" : "bg-danger") text-dark bg-opacity-75">
+							<div class="row fw-bold">
+								@ac.username <div class="line"></div> @ac.roomName <div class="line"></div> @ac.date.ToString("HH:mm") <div class="line"></div> @ac.action.ToString()
+							</div>
+						</li>
+					}
+				</ul>
+			}
+		</div>
+	</div>
+}
+else
+{
+	<p>loading...</p>
+}
+
+@code {
+
+	List<TeacherActivity>? activities;
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		activities = await activityService.GetTeacherHistory();
+		activities.Reverse();
+		StateHasChanged();
+	}
+
+}

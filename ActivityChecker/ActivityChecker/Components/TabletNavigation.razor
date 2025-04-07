@@ -1,0 +1,12 @@
+﻿@inject NavigationManager navManager
+
+<p>Redirecting...</p>
+
+@code {
+
+	protected override void OnInitialized()
+	{
+		navManager.NavigateTo($"{navManager.Uri}code");
+	}
+
+}

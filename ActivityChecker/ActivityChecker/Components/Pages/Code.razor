@@ -1,0 +1,122 @@
+﻿@page "/rooms/{roomId:int}/code"
+@using QRCoder
+@inject NavigationManager navManager
+@inject RoomService service
+@inject ActivityService activityService
+@inject IJSRuntime js
+@rendermode InteractiveServer
+@implements IAsyncDisposable
+
+@if (room != null)
+{
+    <CascadingAuthenticationState>
+        <AuthorizeView Roles="Tablet,Admin">
+            <Authorized>
+                <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h1 class="fw-bold display-1">@(room.name ??= "")</h1>
+                        <div class="my-3">
+                            <img alt="" src="@QRByte" width="500" class="mb-4" />
+                        </div>
+
+                        <h1 class="fw-bold display-1">@(room.code)</h1>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold">Activity:</h3>
+                        <ul class="list-group">
+                            @foreach (User Userpresence in presenceUsers)
+                            {
+                                <li class="list-group-item">@Userpresence.name</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </Authorized>
+
+        </AuthorizeView>
+    </CascadingAuthenticationState>
+}
+else
+{
+    <p>Loading...</p>
+}
+
+@code {
+    [Parameter] public int roomId { get; set; }
+    public string QRByte = "";
+
+    Room? room;
+    List<User> presenceUsers = new List<User>();
+    private PeriodicTimer? _refreshTimer;
+    private CancellationTokenSource _cts = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Initial load
+        await RefreshRoomDataAsync();
+        await RefreshRoomPresenceAsync();
+
+        // Start periodic refresh
+        _refreshTimer = new PeriodicTimer(TimeSpan.FromSeconds(30));
+        _ = Task.Run(async () =>
+        {
+            while (await _refreshTimer.WaitForNextTickAsync(_cts.Token))
+            {
+                await InvokeAsync(async () =>
+                {
+                    await RefreshRoomDataAsync();
+                    await RefreshRoomPresenceAsync();
+                });
+            }
+        });
+    }
+
+    private async Task RefreshRoomDataAsync()
+    {
+        room = await service.GetRoomCode(roomId);
+        var order = await service.GetRoomOrder(roomId);
+        if (room == null || order == null)
+        {
+            navManager.NavigateTo("/");
+            return;
+        }
+        GenerateQRCode($"{navManager.BaseUri}rooms/{roomId}/join/{room.code}/");
+        StateHasChanged();
+    }
+
+    private async Task RefreshRoomPresenceAsync()
+    {
+        var presences = await activityService.GetPresenceInRoom(roomId);
+        presenceUsers = new List<User>();
+        if (presences != null)
+        {
+            foreach (var presence in presences)
+            {
+                var user = await activityService.GetUserById(presence.userId);
+                if (user != null) presenceUsers.Add(user);
+            }
+        }
+        StateHasChanged();
+    }
+
+    private void GenerateQRCode(string text)
+    {
+        if (!string.IsNullOrEmpty(text))
+        {
+            var qrGenerator = new QRCodeGenerator();
+            var qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
+            var qrCode = new BitmapByteQRCode(qrCodeData);
+            var bitmapBytes = qrCode.GetGraphic(20);
+            QRByte = $"data:image/png;base64,{Convert.ToBase64String(bitmapBytes)}";
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        _cts.Cancel();
+        if (_refreshTimer != null)
+             _refreshTimer.Dispose();
+        _cts.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

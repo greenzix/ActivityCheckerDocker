@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "pBmkMyi8SKccjrpkPNcrvPQKFXQa2rIKLcpuHnvQyz8=",
+  "Source": "ActivityCheckerApi",
+  "BasePath": "_content/ActivityCheckerApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

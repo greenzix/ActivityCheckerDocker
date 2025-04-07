@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\obj\\Release\\net8.0\\linux-x64\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ActivityChecker.9gb5z1qsxk.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.ActivityChecker.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.ActivityChecker.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.build.ActivityChecker.props",
+      "PackagePath": "build\\ActivityChecker.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.buildMultiTargeting.ActivityChecker.props",
+      "PackagePath": "buildMultiTargeting\\ActivityChecker.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.buildTransitive.ActivityChecker.props",
+      "PackagePath": "buildTransitive\\ActivityChecker.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

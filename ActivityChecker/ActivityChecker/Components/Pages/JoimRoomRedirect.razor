@@ -1,0 +1,68 @@
+﻿@page "/rooms/{roomId:int}/join/{roomCode}"
+@inject ActivityService service
+@inject RoomService roomService
+@inject AuthenticationStateProvider auth
+@inject NavigationManager navManager
+@inject IJSRuntime js
+@rendermode InteractiveServer
+
+
+
+@code {
+
+	[Parameter] public int roomId { get; set; } = 0;
+
+	[Parameter] public string roomCode { get; set; } = string.Empty;
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			RoomOrder? order = await roomService.GetRoomOrder(roomId);
+			if(order == null)
+			{
+				await roomService.AssignRoom(roomCode);
+			}
+
+			if (await IsTablet()) navManager.NavigateTo("/");
+			else{
+				bool result = await service.JoinRoom(roomId, roomCode);
+				if (result)
+				{
+					navManager.NavigateTo($"/rooms/{roomId}/");
+				}
+				else
+				{
+					if (order == null)
+					{
+						await CreateCookie();
+					}
+					else
+					{
+						await DeleteCookie();	
+					}
+
+				}
+			}
+		}
+	}
+
+	async Task<bool> IsTablet()
+	{
+		AuthenticationState state = await auth.GetAuthenticationStateAsync();
+		return state.User.IsInRole("Tablet");
+	}
+
+	async Task CreateCookie()
+	{
+		await CookieHelper.SetCookieAsync(js, "roomJoin", navManager.Uri, 1);
+		navManager.NavigateTo("/login");
+	}
+
+	async Task DeleteCookie()
+	{
+		await CookieHelper.DeleteCookieAsync(js, "roomJoin");
+		navManager.NavigateTo("/");
+	}
+
+}

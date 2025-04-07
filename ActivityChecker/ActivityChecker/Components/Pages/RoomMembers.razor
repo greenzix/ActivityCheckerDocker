@@ -1,0 +1,93 @@
+﻿@page "/rooms/{roomId:int}/members"
+@inject RoomService service
+@inject NavigationManager navManager
+
+@rendermode InteractiveServer
+
+
+@if(memberList != null)
+{
+	<div>
+		<div class="mt-2">
+			<h1 class="fw-bold">@roomName Members</h1>
+		</div>
+
+		<div class="mt-4">
+			<h3 class="fw-bold">Members:</h3>
+		</div>
+
+		<div class="mt-3">
+			<ul class="list-group">
+				@foreach (RoomMember member in memberList.Where(u => u.permission == Permission.Basic))
+				{
+
+					<li class="list-group-item user-select-none">
+						@member.username
+						<div></div>
+						<button type="button" @onclick="() => PromoteUser(member.userId)" class="btn btn-dark">Promote</button>
+						<button type="button" @onclick="() => KickUser(member.userId)" class="btn btn-danger">Kick</button>
+					</li>
+				}
+			</ul>
+		</div>
+
+		<div class="mt-4">
+			<h3 class="fw-bold">Admins:</h3>
+		</div>
+
+		<div class="mt-3">
+			<ul class="list-group">
+				@foreach (RoomMember member in memberList.Where(u => u.permission == Permission.Admin))
+				{
+
+					<li class="list-group-item user-select-none">
+						@member.username
+						<div></div>
+						<button type="button" @onclick="() => DemoteUser(member.userId)" class="btn btn-dark">Demote</button>
+						<button type="button" @onclick="() => KickUser(member.userId)" class="btn btn-danger">Kick</button>
+					</li>
+
+				}
+			</ul>
+		</div>
+
+	</div>
+}
+else {
+	<p>loading...</p>
+}
+@code {
+
+	[Parameter] public int roomId { get; set; }
+
+	List<RoomMember>? memberList;
+
+	string roomName = string.Empty;
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		roomName = await service.GetRoomName(roomId);
+		memberList = await service.GetRoomMembers(roomId);
+		if (memberList == null) navManager.NavigateTo("/");
+		StateHasChanged();
+	}
+
+	public async Task PromoteUser(int userId)
+	{
+		bool result = await service.ChangeRoomPermissions(userId, roomId, Permission.Admin);
+		StateHasChanged();
+	}
+
+	public async Task DemoteUser(int userId)
+	{
+		bool result = await service.ChangeRoomPermissions(userId, roomId, Permission.Basic);
+		StateHasChanged();
+	}
+
+	public async Task KickUser(int userId)
+	{
+		bool result = await service.KickUser(userId,roomId);
+		StateHasChanged();
+	}
+}
+            

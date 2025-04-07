@@ -1,0 +1,168 @@
+﻿@page "/"
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject RoomService service
+@inject NavigationManager navManager
+@inject IJSRuntime js
+@rendermode InteractiveServer
+
+
+
+<CascadingAuthenticationState>
+	<AuthorizeView>
+		<Authorized>
+			<div>
+
+				<div class="mt-2">
+					<h1 class="fw-bold">Activity Checker</h1>
+				</div>
+
+				<div class="mt-4">
+
+					<h3 class="fw-bold">Add room</h3>
+
+					<input class="entryBorder" type="text" @bind-value="roomCode" />
+
+					<button type="button" class="btn btn-dark" @onclick="AssignRoom">Add</button>
+
+				</div>
+
+
+
+				<div class="mt-4">
+					<h3 class="fw-bold">My Rooms:</h3>
+				</div>
+
+				<div class="mt-3">
+					<ul class="list-group">
+						@foreach (Room room in rooms)
+
+						{
+
+							<li @onclick="() => OpenRoom(room.id)" class="list-group-item user-select-none">@room.name</li>
+
+						}
+					</ul>
+
+				</div>
+
+				@if (user != null)
+				{
+					@if (user.IsInRole("Admin"))
+					{
+						<div class="mt-4">
+							<h3 class="fw-bold">Admin:</h3>
+						</div>
+
+						<div class="mt-3">
+							<button type="button" @onclick=OpenAdminPage class="btn btn-dark">Admin page</button>
+						</div>
+					}					
+				}
+
+				@if (user != null)
+				{
+					@if (user.IsInRole("Admin") || user.IsInRole("Teacher"))
+					{
+						<div class="mt-4">
+							<h3 class="fw-bold">Teacher:</h3>
+						</div>
+
+						<div class="mt-3">
+							<button type="button" @onclick=OpenTeacherHistory class="btn btn-dark">View Activity</button>
+						</div>
+					}
+				}
+
+				<div class="mt-4">
+					<h3 class="fw-bold">Options:</h3>
+				</div>
+
+				<div class="mpt-3">			
+					<button type="button" @onclick="SignOut" class="btn btn-danger">Log out</button>
+					@if(user != null)
+					{
+						@if (user.IsInRole("User"))
+						{
+							<button type="button" @onclick="ViewHistory" class="btn btn-dark ms-3">History</button>
+						}
+					}
+				</div>
+			</div>
+		</Authorized>
+	</AuthorizeView>
+</CascadingAuthenticationState>
+
+
+@code {
+	private ClaimsPrincipal? user;
+	List<RoomOrder> roomOrders { get; set; } = new List<RoomOrder>();
+	List<Room> rooms { get; set; } = new List<Room>();
+	private string roomCode = string.Empty;
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if(firstRender)
+		{
+			var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+			user = authState.User;
+
+			if (!user.Identity.IsAuthenticated) navManager.NavigateTo("/login");
+
+			roomOrders = await service.GetMyRooms();
+			rooms = await service.ConvertRooms(roomOrders);
+			await CheckForRoomRedirect();
+
+			StateHasChanged();
+		}
+	}
+
+	private async Task AssignRoom()
+	{
+		if (roomCode == string.Empty || roomCode == "") return;
+		bool result = await service.AssignRoom(roomCode);
+		if (result)
+		{
+			navManager.NavigateTo(navManager.Uri, true);
+			roomCode = string.Empty;
+		}
+	}
+
+	private void OpenAdminPage()
+	{
+		navManager.NavigateTo("/admin-page");
+	}
+
+	private void OpenTeacherHistory()
+	{
+		navManager.NavigateTo("/teacher-history");
+	}
+
+	private void OpenRoom(int roomId)
+	{
+		navManager.NavigateTo($"/rooms/{roomId}/");
+	}
+
+	private void SignOut()
+	{
+		navManager.NavigateTo("/logout",true);
+	}
+
+	private void ViewHistory()
+	{
+		navManager.NavigateTo("/history");
+	}
+
+
+	private async Task<bool> CheckForRoomRedirect()
+	{
+		string? redirect = await CookieHelper.GetCookieAsync(js,"roomJoin");
+		if(redirect != null)
+		{
+			await CookieHelper.DeleteCookieAsync(js, "roomJoin");
+			navManager.NavigateTo(redirect);
+			return true;
+		}
+		return false;
+	}
+}

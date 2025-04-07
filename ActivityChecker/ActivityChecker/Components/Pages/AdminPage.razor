@@ -1,0 +1,150 @@
+﻿@page "/admin-page"
+@rendermode InteractiveServer
+@inject RoomService roomService
+@inject PasswordResetService passwordReset
+@inject NavigationManager navManager
+@inject RoleService roleService
+@inject IJSRuntime js
+
+<div>
+	<div class="mt-2">
+		<h1 class="fw-bold">Admin page</h1>
+	</div>
+
+	<div class="mt-5">
+		<h4 class="fw-bold">Add room</h4>
+		<input class="entryBorder" placeholder="Room name" @bind-value="AddRoomName" type="text"  />
+		<button type="button" @onclick=CreateRoom class="btn btn-dark">Add</button>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="fw-bold">Remove room</h4>
+		<input class="entryBorder" placeholder="Room name" @bind-value="RemoveRoomName" type="text" />
+		<button type="button" @onclick=RemoveRoom class="btn btn-dark">Remove</button>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="fw-bold">Convert tablet</h4>
+		<input class="entryBorder" placeholder="Username" @bind-value="TabletUsername" type="text" />
+		<button type="button" @onclick=ConvertTablet class="btn btn-dark">Convert</button>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="fw-bold">Convert user</h4>
+		<input class="entryBorder" placeholder="Username" @bind-value="UserUsername" type="text" />
+		<button type="button" @onclick=ConvertUser class="btn btn-dark">Convert</button>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="fw-bold">Add teacher</h4>
+		<input class="entryBorder" placeholder="Username" @bind-value="TeacherUsername" type="text" />
+		<button type="button" @onclick=AddTeacher class="btn btn-dark">Add</button>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="fw-bold">Remove teacher</h4>
+		<input class="entryBorder" placeholder="Username" @bind-value="RemoveTeacherUsername" type="text" />
+		<button type="button" @onclick=RemoveTeacher class="btn btn-dark">Add</button>
+	</div>
+
+	<div class="mt-4">
+		<h4 class="fw-bold">Reset token</h4>
+		<input class="entryBorder" @bind-value=ResetUsername placeholder="Username" type="text" />
+		<button type="button" @onclick=CreateResetToken class="btn btn-dark">Create</button>
+		<p class="fw-bold">Token:  <b>@ResetToken</b> </p>
+	</div>
+</div>
+
+@code {
+
+	private string AddRoomName { get; set; } = string.Empty;
+	private string RemoveRoomName { get; set; } = string.Empty;
+	private string TabletUsername { get; set; } = string.Empty;
+	private string UserUsername { get; set; } = string.Empty;
+	private string TeacherUsername { get; set; } = string.Empty;
+	private string RemoveTeacherUsername { get; set; } = string.Empty;
+	private string ResetUsername { get; set; } = string.Empty;
+	private string ResetToken { get; set; } = string.Empty;
+
+
+	async Task CreateRoom()
+	{
+		if (string.IsNullOrWhiteSpace(AddRoomName)) return;
+		CreateRoomDTO dTO = new CreateRoomDTO 
+		{
+			name = AddRoomName,
+			closed = false,
+			limit = 20
+		};
+		bool result = await roomService.CreateRoom(dTO);
+		if(result)
+		{
+			AddRoomName = string.Empty;
+			navManager.NavigateTo("/", true);
+		}
+	}
+
+	async Task RemoveRoom()
+	{
+		if (string.IsNullOrWhiteSpace(RemoveRoomName)) return;
+		bool result = await roomService.DeleteRoom(RemoveRoomName);
+		if(result)
+		{
+			RemoveRoomName = string.Empty;
+			navManager.NavigateTo("/", true);
+		}
+	}
+
+	async Task ConvertTablet()
+	{
+		if (string.IsNullOrWhiteSpace(TabletUsername)) return;
+		bool result = await roleService.ConvertTablet(TabletUsername);
+		if(result)
+		{
+			TabletUsername = string.Empty;
+			StateHasChanged();
+		}
+	}
+
+	async Task ConvertUser()
+	{
+		if (string.IsNullOrWhiteSpace(UserUsername)) return;
+		bool result = await roleService.ConvertUser(UserUsername);
+		if (result)
+		{
+			UserUsername = string.Empty;
+			StateHasChanged();
+		}
+	}
+
+	async Task AddTeacher()
+	{
+		if (string.IsNullOrWhiteSpace(TeacherUsername)) return;
+		bool result = await roleService.AddTeacher(TeacherUsername);
+		if(result)
+		{
+			TeacherUsername = string.Empty;
+			StateHasChanged();
+		}
+	}
+
+	async Task RemoveTeacher()
+	{
+		if (string.IsNullOrWhiteSpace(RemoveTeacherUsername)) return;
+		bool result = await roleService.RemoveTeacher(RemoveTeacherUsername);
+		if (result)
+		{
+			RemoveTeacherUsername = string.Empty;
+			StateHasChanged();
+		}
+	}
+
+	async Task CreateResetToken()
+	{
+		if (string.IsNullOrWhiteSpace(ResetUsername)) return;
+		ResetToken = await passwordReset.GenerateToken(ResetUsername) ?? string.Empty;
+		ResetUsername = string.Empty;
+		StateHasChanged();
+	}
+
+}

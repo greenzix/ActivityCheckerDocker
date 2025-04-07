@@ -1,0 +1,52 @@
+﻿@page "/login"
+@inject NavigationManager Navigation
+@inject UserService service
+@layout LoginLayout
+@rendermode InteractiveServer
+
+
+<div class="container px-5">
+    <div class="card shadow p-4">
+        <h3 class="text-center mb-4">Login</h3>
+        <div class="form-group mb-3">
+            <label for="username" class="form-label">Name</label>
+            <input id="username" class="form-control" placeholder="Enter your username" @bind-value="Name" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Enter your password" @bind-value="Password" />
+        </div>
+        <button @onclick="HandleLogin" class="btn btn-primary w-100">Login</button>
+    </div>
+    <div class="mt-2">
+        <p class="mb-0">Dont already have an account <a href="/register">register</a></p>
+        <p>Forgot password <a href="/reset-password">reset</a></p>
+    </div>
+</div>
+
+
+
+
+@code {
+
+    [CascadingParameter] public Task<AuthenticationState> AuthTask { get; set; }
+    [Inject] private AuthenticationStateProvider AuthState { get; set; }
+    private string Name { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;   
+
+    private System.Security.Claims.ClaimsPrincipal user;
+
+
+    private async Task HandleLogin()
+    {
+
+        LoginDTO loginModel = new LoginDTO { name = Name, password = Password };
+        string? token = await service.GetToken(loginModel);
+        if (token == null) return;
+        await((TokenAuthenticationStateProvider) AuthState).MarkUserAsAuthenticated(token);
+        Navigation.NavigateTo("/", true);
+    }
+
+
+  
+}
