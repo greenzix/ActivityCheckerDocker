@@ -9,105 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ActivityChecker
 build_property.RootNamespace = ActivityChecker
-build_property.ProjectDir = C:\Users\Studio1\source\repos\ActivityChecker\ActivityChecker\
+build_property.ProjectDir = C:\Users\Studio1\Desktop\ActivityCheckerDocker\ActivityChecker\ActivityChecker\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Studio1\source\repos\ActivityChecker\ActivityChecker
+build_property.MSBuildProjectDirectory = C:\Users\Studio1\Desktop\ActivityCheckerDocker\ActivityChecker\ActivityChecker
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/App.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/AuthenticationRedirect.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/AuthenticationRedirect.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblJlZGlyZWN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Layout/LoginLayout.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Layout/LoginLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTG9naW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/OpenCamera.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/OpenCamera.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcGVuQ2FtZXJhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/AdminPage.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/AdminPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/Code.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/Code.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb2RlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/Error.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/JoimRoomRedirect.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/JoimRoomRedirect.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKb2ltUm9vbVJlZGlyZWN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/Login.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/Logout.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/Logout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/PasswordReset.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/PasswordReset.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXNzd29yZFJlc2V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/Register.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/RoomHistory.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/RoomHistory.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSb29tSGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/RoomMembers.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/RoomMembers.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSb29tTWVtYmVycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/TeacherHistory.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/TeacherHistory.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUZWFjaGVySGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/UserHistory.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/UserHistory.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc2VySGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Routes.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/TabletNavigation.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/TabletNavigation.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWJsZXROYXZpZ2F0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/_Imports.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Layout/MainLayout.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-58hkpanb83
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Layout/NavMenu.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-46kfjsr9cy
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/Home.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-88m7f6hdog
 
-[C:/Users/Studio1/source/repos/ActivityChecker/ActivityChecker/Components/Pages/RoomPage.razor]
+[C:/Users/Studio1/Desktop/ActivityCheckerDocker/ActivityChecker/ActivityChecker/Components/Pages/RoomPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSb29tUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-tofysuie0s

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uI7j4oj0aE4=",
+  "dgSpecHash": "QutQlP0VBfk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\ActivityChecker.csproj",
+  "projectFilePath": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\ActivityChecker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Studio1\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
     "C:\\Users\\Studio1\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
@@ -25,8 +25,7 @@
     "C:\\Users\\Studio1\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
     "C:\\Users\\Studio1\\.nuget\\packages\\qrcodernetcore\\1.0.0\\qrcodernetcore.1.0.0.nupkg.sha512",
     "C:\\Users\\Studio1\\.nuget\\packages\\system.drawing.common\\4.5.1\\system.drawing.common.4.5.1.nupkg.sha512",
-    "C:\\Users\\Studio1\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.3.0\\system.identitymodel.tokens.jwt.8.3.0.nupkg.sha512",
-    "C:\\Users\\Studio1\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.14\\microsoft.netcore.app.host.linux-x64.8.0.14.nupkg.sha512"
+    "C:\\Users\\Studio1\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.3.0\\system.identitymodel.tokens.jwt.8.3.0.nupkg.sha512"
   ],
   "logs": []
 }

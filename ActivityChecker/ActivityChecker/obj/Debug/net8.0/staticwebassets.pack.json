@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css",
+      "Id": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css",
       "PackagePath": "staticwebassets\\ActivityChecker.9gb5z1qsxk.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\app.css",
+      "Id": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Studio1\\source\\repos\\ActivityChecker\\ActivityChecker\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
