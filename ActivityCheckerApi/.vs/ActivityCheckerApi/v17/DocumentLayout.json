@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityCheckerApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92F5BD9C-1021-453C-9982-F3FA7D9E12F5}|ActivityCheckerApi\\ActivityCheckerApi.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitycheckerapi\\activitycheckerapi\\models\\viewmodels\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92F5BD9C-1021-453C-9982-F3FA7D9E12F5}|ActivityCheckerApi\\ActivityCheckerApi.csproj|solutionrelative:activitycheckerapi\\models\\viewmodels\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92F5BD9C-1021-453C-9982-F3FA7D9E12F5}|ActivityCheckerApi\\ActivityCheckerApi.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitycheckerapi\\activitycheckerapi\\models\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F5BD9C-1021-453C-9982-F3FA7D9E12F5}|ActivityCheckerApi\\ActivityCheckerApi.csproj|solutionrelative:activitycheckerapi\\models\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92F5BD9C-1021-453C-9982-F3FA7D9E12F5}|ActivityCheckerApi\\ActivityCheckerApi.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitycheckerapi\\activitycheckerapi\\models\\viewmodels\\activityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,11 +110,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a7673ab8-96c2-4f8f-86b9-ef4527b5383a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityCheckerApi\\ActivityCheckerApi\\Models\\ViewModels\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "ActivityCheckerApi\\Models\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityCheckerApi\\ActivityCheckerApi\\Models\\ViewModels\\UserViewModel.cs",
+              "RelativeToolTip": "ActivityCheckerApi\\Models\\ViewModels\\UserViewModel.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAwGEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T07:05:46.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -126,8 +139,7 @@
               "RelativeToolTip": "ActivityCheckerApi\\Program.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:18:09.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T06:18:09.144Z"
             },
             {
               "$type": "Document",
@@ -139,21 +151,7 @@
               "RelativeToolTip": "ActivityCheckerApi\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T07:33:19.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoomViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityCheckerApi\\ActivityCheckerApi\\Models\\ViewModels\\RoomViewModel.cs",
-              "RelativeDocumentMoniker": "ActivityCheckerApi\\Models\\ViewModels\\RoomViewModel.cs",
-              "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityCheckerApi\\ActivityCheckerApi\\Models\\ViewModels\\RoomViewModel.cs",
-              "RelativeToolTip": "ActivityCheckerApi\\Models\\ViewModels\\RoomViewModel.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAuwFYAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T14:22:28.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:33:19.526Z"
             },
             {
               "$type": "Document",
@@ -165,8 +163,7 @@
               "RelativeToolTip": "ActivityCheckerApi\\Models\\ViewModels\\ActivityViewModel.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowHwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T14:22:28.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T14:22:28.03Z"
             },
             {
               "$type": "Document",

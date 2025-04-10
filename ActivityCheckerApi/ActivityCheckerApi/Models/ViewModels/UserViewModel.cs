@@ -93,7 +93,11 @@ namespace ActivityCheckerApi.Models.ViewModels
 		{
 			User? user = await _context.Users.FirstOrDefaultAsync(u => u.Name == username);
 			if (user == null) return false;
-			user.Roles.Remove(role);
+			List<string>? roles = user.Roles.Where(u => u == role).ToList();
+			foreach(var currRole in roles)
+			{
+				user.Roles.Remove(currRole);	
+			}
 			_context.Users.Update(user);
 			await _context.SaveChangesAsync();
 			return true;

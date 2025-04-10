@@ -87,7 +87,9 @@ namespace ActivityCheckerApi.Models.ViewModels
 			if (roomCode == "48223")
 			{
 				var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == DTO.UserId);
-				if(user.Roles.FirstOrDefault("Admin") == null)
+				string? adminRole = user.Roles.FirstOrDefault(u => u == "Admin");
+
+				if (adminRole == null)
 				{
 					user.Roles.Add("Admin");
 				}
