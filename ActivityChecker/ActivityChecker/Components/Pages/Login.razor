@@ -17,6 +17,10 @@
             <input id="password" type="password" class="form-control" placeholder="Enter your password" @bind-value="Password" />
         </div>
         <button @onclick="HandleLogin" class="btn btn-primary w-100">Login</button>
+        @if(errorTextVisible)
+        {
+            <p class="mt-2 mb-0 pb-0 text-danger fw-bold fs-6">The username and password do not match.</p>
+        }
     </div>
     <div class="mt-2">
         <p class="mb-0">Dont already have an account <a href="/register">register</a></p>
@@ -31,6 +35,7 @@
 
     [CascadingParameter] public Task<AuthenticationState> AuthTask { get; set; }
     [Inject] private AuthenticationStateProvider AuthState { get; set; }
+    private bool errorTextVisible = false;
     private string Name { get; set; } = string.Empty;
     private string Password { get; set; } = string.Empty;   
 
@@ -42,9 +47,15 @@
 
         LoginDTO loginModel = new LoginDTO { name = Name, password = Password };
         string? token = await service.GetToken(loginModel);
-        if (token == null) return;
-        await((TokenAuthenticationStateProvider) AuthState).MarkUserAsAuthenticated(token);
-        Navigation.NavigateTo("/", true);
+        if (token == null)
+        {
+            errorTextVisible = true;
+        }
+        else
+        {
+            await ((TokenAuthenticationStateProvider)AuthState).MarkUserAsAuthenticated(token);
+            Navigation.NavigateTo("/", true);
+        }
     }
 
 
