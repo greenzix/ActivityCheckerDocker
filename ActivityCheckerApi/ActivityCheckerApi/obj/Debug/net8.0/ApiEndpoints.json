@@ -296,6 +296,16 @@
   },
   {
     "ContainingType": "ActivityCheckerApi.Controllers.RoomController",
+    "Method": "GetExpireTime",
+    "RelativePath": "Room/GetExpireTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ActivityCheckerApi.Controllers.RoomController",
     "Method": "GetRoomAdmins",
     "RelativePath": "Room/GetRoomAdmins",
     "HttpMethod": "GET",

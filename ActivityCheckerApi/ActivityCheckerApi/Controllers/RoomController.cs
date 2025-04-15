@@ -121,6 +121,13 @@ namespace ActivityCheckerApi.Controllers
 			return Ok(room);
 		}
 
+		[HttpGet("GetExpireTime")]
+		[Authorize(Policy = "TabletPolicy")]
+		public async Task<IActionResult> GetExpireTime()
+		{
+			return Ok(await vm.GetExpireTime());
+		}
+
 
 		[HttpGet("GetRoomName")]
 		public async Task<IActionResult> GetRoomName(int roomId)

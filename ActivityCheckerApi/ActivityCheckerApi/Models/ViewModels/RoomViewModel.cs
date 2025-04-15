@@ -2,6 +2,7 @@
 using ActivityCheckerApi.Models.Background_Service;
 using ActivityCheckerApi.Models.DTO;
 using ActivityCheckerApi.Models.Entities;
+using ActivityCheckerApi.Models.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace ActivityCheckerApi.Models.ViewModels
@@ -48,6 +49,13 @@ namespace ActivityCheckerApi.Models.ViewModels
 		{
 			await _context.Rooms.ExecuteDeleteAsync();
 			return true;
+		}
+
+		public async Task<DateTime> GetExpireTime()
+		{
+			DateTime now = DateTime.Now;
+			DateTime periodEnd = TimeHelper.GetNextPeriodEnd(now);
+			return periodEnd;
 		}
 
 		public async Task<Room> GetRoomCode(int roomId)

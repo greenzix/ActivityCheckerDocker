@@ -62,6 +62,28 @@ namespace ActivityChecker.Models.Services
 			}
 		}
 
+		public async Task <DateTime> GetExpireDate()
+		{
+			try
+			{
+				var request = new HttpRequestMessage(HttpMethod.Get, $"Room/GetExpireTime");
+
+
+				var response = await _httpClient.SendAsync(request);
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = await response.Content.ReadFromJsonAsync<DateTime>();
+					return result;
+				}
+				else return new DateTime();
+			}
+			catch (Exception ex)
+			{
+				return new DateTime();
+			}
+		}
+
 		public async Task<bool> ChangeRoomPermissions(int userId, int roomId, Permission permission)
 		{
 			try

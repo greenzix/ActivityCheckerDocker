@@ -525,6 +525,18 @@
         }
       }
     },
+    "/Room/GetExpireTime": {
+      "get": {
+        "tags": [
+          "Room"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Room/GetRoomName": {
       "get": {
         "tags": [

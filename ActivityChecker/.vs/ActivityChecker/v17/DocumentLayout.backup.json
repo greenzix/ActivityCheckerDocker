@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|solutionrelative:activitychecker\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\components\\pages\\code.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|solutionrelative:activitychecker\\components\\pages\\code.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\models\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|solutionrelative:activitychecker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|solutionrelative:activitychecker\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\models\\entitites\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|solutionrelative:activitychecker\\models\\entitites\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\components\\pages\\code.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|solutionrelative:activitychecker\\components\\pages\\code.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3B93626E-4FFF-4BFF-86A8-A3A202C3FB3B}|ActivityChecker\\ActivityChecker.csproj|c:\\users\\studio1\\desktop\\activitycheckerdocker\\activitychecker\\activitychecker\\components\\pages\\joimroomredirect.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -110,28 +110,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a7673ab8-96c2-4f8f-86b9-ef4527b5383a}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoomService.cs",
-              "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\RoomService.cs",
-              "RelativeDocumentMoniker": "ActivityChecker\\Models\\Services\\RoomService.cs",
-              "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\RoomService.cs",
-              "RelativeToolTip": "ActivityChecker\\Models\\Services\\RoomService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA5wDYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T06:22:19.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Program.cs",
               "RelativeDocumentMoniker": "ActivityChecker\\Program.cs",
@@ -143,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AdminPage.razor",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\AdminPage.razor",
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\AdminPage.razor",
@@ -155,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TeacherHistory.razor",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\TeacherHistory.razor",
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\TeacherHistory.razor",
@@ -167,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PasswordResetService.cs",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\PasswordResetService.cs",
               "RelativeDocumentMoniker": "ActivityChecker\\Models\\Services\\PasswordResetService.cs",
@@ -179,32 +162,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\Login.razor",
               "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\Login.razor",
               "RelativeToolTip": "ActivityChecker\\Components\\Pages\\Login.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T21:32:42.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T21:32:42.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "Code.razor",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\Code.razor",
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\Code.razor",
               "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\Code.razor",
               "RelativeToolTip": "ActivityChecker\\Components\\Pages\\Code.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAEEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-28T20:12:26.846Z"
+              "WhenOpened": "2025-01-28T20:12:26.846Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PasswordReset.razor",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\PasswordReset.razor",
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\PasswordReset.razor",
@@ -222,13 +205,27 @@
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "ActivityChecker\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-03T17:10:47.157Z"
+              "WhenOpened": "2025-02-03T17:10:47.157Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "ActivityChecker\\Models\\Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\RoomService.cs",
+              "RelativeToolTip": "ActivityChecker\\Models\\Services\\RoomService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwEAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T06:22:19.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CookieHelper.cs",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\CookieHelper.cs",
               "RelativeDocumentMoniker": "ActivityChecker\\Models\\Services\\CookieHelper.cs",
@@ -240,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "ActivityChecker\\Models\\Services\\UserService.cs",
@@ -252,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Register.razor",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\Register.razor",
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\Register.razor",
@@ -276,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Entitites\\Room.cs",
               "RelativeDocumentMoniker": "ActivityChecker\\Models\\Entitites\\Room.cs",
@@ -288,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AuthenticationHeaderHandler.cs",
               "DocumentMoniker": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Models\\Services\\AuthenticationHeaderHandler.cs",
               "RelativeDocumentMoniker": "ActivityChecker\\Models\\Services\\AuthenticationHeaderHandler.cs",
