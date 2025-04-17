@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "ActivityChecker\\Components\\Pages\\TeacherHistory.razor",
               "ToolTip": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\Components\\Pages\\TeacherHistory.razor",
               "RelativeToolTip": "ActivityChecker\\Components\\Pages\\TeacherHistory.razor",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-17T08:40:25.25Z",
               "EditorCaption": ""
@@ -127,7 +127,8 @@
               "RelativeToolTip": "ActivityChecker\\Components\\App.razor",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAADEAAAB5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T18:24:10.078Z"
+              "WhenOpened": "2025-01-21T18:24:10.078Z",
+              "EditorCaption": ""
             }
           ]
         }

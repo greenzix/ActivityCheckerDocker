@@ -1,7 +1,8 @@
 ﻿@page "/teacher-history"
 @using ActivityCheckerApi.Models.Entities
-@inject TeacherService teacherService                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-@rendermode InteractiveAuto  
+@inject TeacherService teacherService    
+@inject NavigationManager navManager
+@rendermode InteractiveServer
 
 @if (selectedUser != null)
 {
@@ -9,7 +10,7 @@
 		<div class="mt-2">
 			<h1 class="fw-bold">@(selectedUser.name + "'s history'")</h1>
 			<button type="button" @onclick=SelectAnotherStudent
-				class="btn btn-primary">Select another student</button>
+			class="btn btn-primary">Select another student</button>
 		</div>
 
 		@if(activityHistory.Count != 0)
@@ -46,7 +47,7 @@ else
 		</div>
 
 		<div class="mt-2">
-			<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="0.5rem" class="rz-p-sm-12">
+			<RadzenStack @rendermode=InteractiveServer rientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="0.5rem" class="rz-p-sm-12">
 				<RadzenLabel Text="Select Value" Component="DropDownBindValue" />
 				<RadzenDropDown TValue="StudentDTO" @bind-Value=@selectedUser Change="@(args => OnStudentChange(args))" Data=studentList TextProperty="@nameof(StudentDTO.name)" Style="width: 100%; max-width: 400px;" Name="DropDownBindValue" />
 			</RadzenStack>
@@ -60,14 +61,16 @@ else
 	List<StudentDTO> studentList = new();
 	StudentDTO ? selectedUser;
 
-	protected override async Task OnAfterRenderAsync(bool firstRender)
+
+	protected override async Task OnInitializedAsync()
 	{
-		if (firstRender || studentList.Count == 0)
+		if (studentList.Count == 0)
 		{
 			studentList = await teacherService.GetAllStudentsAsync();
 			StateHasChanged();
 		}
 	}
+
 
 	private async Task OnStudentChange(object args)
 	{
