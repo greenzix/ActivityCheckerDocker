@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ActivityChecker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41c64eb44e7bddd9c5f5d1c4390925e471128261")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b10a00caa69862db454d65e5a4550fa4730dc0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ActivityChecker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ActivityChecker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

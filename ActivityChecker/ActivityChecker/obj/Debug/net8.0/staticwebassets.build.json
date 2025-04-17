@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SU7bHzO5TQC8G8VdcavKnWU/csEz03krmWP5KFRvUKk=",
+  "Hash": "o7jnuqIB0v/x4fOhhv+dXJDyvqP10SE/utzrwZYl5Q0=",
   "Source": "ActivityChecker",
   "BasePath": "_content/ActivityChecker",
   "Mode": "Default",
@@ -787,8 +787,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "9gb5z1qsxk",
-      "Integrity": "x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E=",
+      "Fingerprint": "ie9qebo4k0",
+      "Integrity": "GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ActivityChecker.styles.css"
@@ -808,8 +808,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "9gb5z1qsxk",
-      "Integrity": "x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E=",
+      "Fingerprint": "ie9qebo4k0",
+      "Integrity": "GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css"
@@ -3853,96 +3853,6 @@
       ]
     },
     {
-      "Route": "ActivityChecker.9gb5z1qsxk.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6239"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Jan 2025 18:17:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9gb5z1qsxk"
-        },
-        {
-          "Name": "label",
-          "Value": "ActivityChecker.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E="
-        }
-      ]
-    },
-    {
-      "Route": "ActivityChecker.9gb5z1qsxk.styles.css",
-      "AssetFile": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ActivityChecker.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6239"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 08:43:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9gb5z1qsxk"
-        },
-        {
-          "Name": "label",
-          "Value": "ActivityChecker.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E="
-        }
-      ]
-    },
-    {
       "Route": "ActivityChecker.bundle.scp.css",
       "AssetFile": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css",
       "Selectors": [],
@@ -3953,7 +3863,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6239"
+          "Value": "6356"
         },
         {
           "Name": "Content-Type",
@@ -3961,11 +3871,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E=\""
+          "Value": "\"GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Jan 2025 18:17:55 GMT"
+          "Value": "Thu, 17 Apr 2025 12:10:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3975,7 +3885,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E="
+          "Value": "sha256-GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM="
+        }
+      ]
+    },
+    {
+      "Route": "ActivityChecker.ie9qebo4k0.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ActivityChecker.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 12:10:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ie9qebo4k0"
+        },
+        {
+          "Name": "label",
+          "Value": "ActivityChecker.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM="
+        }
+      ]
+    },
+    {
+      "Route": "ActivityChecker.ie9qebo4k0.styles.css",
+      "AssetFile": "C:\\Users\\Studio1\\Desktop\\ActivityCheckerDocker\\ActivityChecker\\ActivityChecker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ActivityChecker.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 12:10:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ie9qebo4k0"
+        },
+        {
+          "Name": "label",
+          "Value": "ActivityChecker.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM="
         }
       ]
     },
@@ -3990,7 +3990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6239"
+          "Value": "6356"
         },
         {
           "Name": "Content-Type",
@@ -3998,11 +3998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E=\""
+          "Value": "\"GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 08:43:02 GMT"
+          "Value": "Thu, 17 Apr 2025 12:10:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4012,7 +4012,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-x+8IDTOB5ya/EUuyudjikUewSWJvSfqU8utkm5JWU6E="
+          "Value": "sha256-GgxFZqNtrwc/01ocRo+QavdKhjJRampgjI6NZIiR2YM="
         }
       ]
     },
