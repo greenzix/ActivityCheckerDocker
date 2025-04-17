@@ -63,6 +63,13 @@ namespace ActivityCheckerApi.Controllers
 			return Ok(await vm.GetTeacherActivity());
 		}
 
+		[HttpGet("GetStudentHistory")]
+		[Authorize(Policy = "TeacherPolicy")]
+		public async Task<IActionResult> GeStudentHistoryy()
+		{
+			return Ok(await vm.GetTeacherActivity());
+		}
+
 		[HttpGet("GetRoomHistory")]
 		public async Task<IActionResult> GetRoomHistory(int roomId)
 		{

@@ -12,14 +12,14 @@
     <CascadingAuthenticationState>
         <AuthorizeView Roles="Tablet,Admin">
             <Authorized>
-                <div class="container-fluid vh-80  d-flex  mt-5 justify-content-center align-items-center">
+                <div class="container-fluid vh-80  d-flex p-4 justify-content-center align-items-center">
                     <div class="text-center">
                         <h1 class="fw-bold display-1">@(room.name ??= "")</h1>
                         <div class="bg-black border-4 rounded-3">
                             <p class="p-0 m-0 text-white">class ends in @(expireDate.Subtract(DateTime.Now).Minutes) minutes</p>
                         </div>
                         <div class="mb-2">
-                            <img alt="" src="@QRByte" width="500" class="mb-4" />
+                            <img alt="" src="@QRByte" width="400" class="mb-4" />
                         </div>
 
                         <h1 class="fw-bold display-1">@(room.code)</h1>

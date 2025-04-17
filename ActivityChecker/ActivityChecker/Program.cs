@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+	.AddInteractiveWebAssemblyComponents()
+	.AddInteractiveServerComponents();
 
 
 builder.Services.AddRazorPages();
@@ -32,6 +34,7 @@ builder.Services.AddScoped<RoomService>();
 builder.Services.AddScoped<ActivityService>();
 builder.Services.AddScoped<RoleService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<TeacherService>();
 builder.Services.AddScoped<PasswordResetService>();
 
 
@@ -104,6 +107,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorizationCore();
 //builder.Services.AddCascadingAuthenticationState();
 
+builder.Services.AddRadzenComponents();
+builder.Services.AddScoped<Radzen.DialogService>();
+builder.Services.AddScoped<Radzen.NotificationService>();
+builder.Services.AddScoped<Radzen.ThemeService>();
+
 
 var app = builder.Build();
 
@@ -129,6 +137,7 @@ app.UseAntiforgery();
 
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+	.AddInteractiveWebAssemblyRenderMode()
+	.AddInteractiveServerRenderMode();
 
 app.Run();

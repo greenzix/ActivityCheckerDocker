@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "ActivityCheckerApi.Controllers.ActivityController",
+    "Method": "GeStudentHistoryy",
+    "RelativePath": "Activity/GetStudentHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ActivityCheckerApi.Controllers.ActivityController",
     "Method": "GetTeacherHistory",
     "RelativePath": "Activity/GetTeacherHistory",
     "HttpMethod": "GET",
@@ -426,6 +436,32 @@
       {
         "Name": "roomName",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ActivityCheckerApi.Controllers.TeacherController",
+    "Method": "GetAllStudents",
+    "RelativePath": "Teacher/GetAllStudent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ActivityCheckerApi.Controllers.TeacherController",
+    "Method": "GetHistoryForStudent",
+    "RelativePath": "Teacher/GetHistoryForStudent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

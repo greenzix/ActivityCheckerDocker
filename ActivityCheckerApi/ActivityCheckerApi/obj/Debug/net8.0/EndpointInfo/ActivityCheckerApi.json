@@ -102,6 +102,18 @@
         }
       }
     },
+    "/Activity/GetStudentHistory": {
+      "get": {
+        "tags": [
+          "Activity"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Activity/GetRoomHistory": {
       "get": {
         "tags": [
@@ -619,6 +631,40 @@
           },
           {
             "name": "roomId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Teacher/GetAllStudent": {
+      "get": {
+        "tags": [
+          "Teacher"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Teacher/GetHistoryForStudent": {
+      "get": {
+        "tags": [
+          "Teacher"
+        ],
+        "parameters": [
+          {
+            "name": "studentId",
             "in": "query",
             "schema": {
               "type": "integer",

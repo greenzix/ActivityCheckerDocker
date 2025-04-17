@@ -30,6 +30,7 @@ builder.Services.AddScoped<UserViewModel>();
 builder.Services.AddScoped<ActivityViewModel>();
 builder.Services.AddScoped<TeacherViewModel>();
 builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<TeacherViewModel>();
 builder.Services.AddScoped<PasswordResetTokenGenerator>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>

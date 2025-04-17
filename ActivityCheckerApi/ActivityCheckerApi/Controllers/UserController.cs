@@ -21,6 +21,7 @@ namespace ActivityCheckerApi.Controllers
 		public UserController(UserViewModel vm)
 		{
 			this.vm = vm;
+
 		}
 
 		[HttpGet("GetAllUsers")]
@@ -92,5 +93,6 @@ namespace ActivityCheckerApi.Controllers
 			return Ok();
 		}
 
+		
 	}
 }

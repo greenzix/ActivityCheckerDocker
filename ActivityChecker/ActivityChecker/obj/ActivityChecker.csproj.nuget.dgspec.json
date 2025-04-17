@@ -61,6 +61,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.21.0, )"
@@ -68,6 +76,10 @@
             "QRCoderNetCore": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[6.6.1, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
