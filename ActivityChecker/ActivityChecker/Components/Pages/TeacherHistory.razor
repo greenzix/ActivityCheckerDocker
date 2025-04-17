@@ -8,7 +8,8 @@
 	<div>
 		<div class="mt-2">
 			<h1 class="fw-bold">@(selectedUser.name + "'s history'")</h1>
-			<button type="button" @onclick=SelectAnotherStudent class="btn btn-primary">Select another student</button>
+			<button type="button" @onclick=SelectAnotherStudent
+				class="btn btn-primary">Select another student</button>
 		</div>
 
 		@if(activityHistory.Count != 0)
@@ -61,7 +62,7 @@ else
 
 	protected override async Task OnAfterRenderAsync(bool firstRender)
 	{
-		if(firstRender)
+		if (firstRender || studentList.Count == 0)
 		{
 			studentList = await teacherService.GetAllStudentsAsync();
 			StateHasChanged();
