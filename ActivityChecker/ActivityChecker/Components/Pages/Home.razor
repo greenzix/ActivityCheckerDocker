@@ -17,19 +17,21 @@
 					<h1 class="fw-bold">Activity Checker</h1>
 				</div>
 
-				<div class="mt-4">
+				<div class="mt-4 backborder bg-dark text-white">
 
 					<h3 class="fw-bold">Add room</h3>
 
 					<input class="entryBorder" type="text" @bind-value="roomCode" />
 
-					<button type="button" class="btn btn-dark" @onclick="AssignRoom">Add</button>
+					<button type="button" class="btn btn-primary" @onclick="AssignRoom">Add</button>
+
+					<p class="opacity-50 mb-0 my-2">If you dont see the room you are trying to join under "My rooms", type its pin here to add it.</p>
 				</div>
 
 
 
 				<div class="mt-4">
-					<h3 class="fw-bold">My Rooms:</h3>
+					<h3 class="fw-bold">My rooms:</h3>
 				</div>
 
 				<div class="mt-3">

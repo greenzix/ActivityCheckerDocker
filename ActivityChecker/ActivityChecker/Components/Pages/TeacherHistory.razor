@@ -48,7 +48,7 @@ else
 
 		<div class="mt-2">
 			<RadzenStack @rendermode=InteractiveServer rientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="0.5rem" class="rz-p-sm-12">
-				<RadzenLabel Text="Select Value" Component="DropDownBindValue" />
+				<RadzenLabel Text="Select a student" Component="DropDownBindValue" />
 				<RadzenDropDown TValue="StudentDTO" @bind-Value=@selectedUser Change="@(args => OnStudentChange(args))" Data=studentList TextProperty="@nameof(StudentDTO.name)" Style="width: 100%; max-width: 400px;" Name="DropDownBindValue" />
 			</RadzenStack>
 		</div>
