@@ -16,13 +16,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7x16z9kpn5"},{"Name":"integrity","Value":"sha256-xWn\u002BHuXek7OJMTiasqGYY0IbcDQWO956OqJieomnnx4="},{"Name":"label","Value":"_content/ActivityChecker/app.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2668"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xWn\u002BHuXek7OJMTiasqGYY0IbcDQWO956OqJieomnnx4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 20 Jan 2025 17:46:59 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2668"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xWn\u002BHuXek7OJMTiasqGYY0IbcDQWO956OqJieomnnx4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 07:42:52 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ActivityChecker/app.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xWn\u002BHuXek7OJMTiasqGYY0IbcDQWO956OqJieomnnx4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2668"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xWn\u002BHuXek7OJMTiasqGYY0IbcDQWO956OqJieomnnx4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 20 Jan 2025 17:46:59 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2668"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xWn\u002BHuXek7OJMTiasqGYY0IbcDQWO956OqJieomnnx4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 07:42:52 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ActivityChecker/bootstrap/bootstrap.min.bpk8xqwxhs.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\bootstrap\bootstrap.min.css'))</AssetFile>
