@@ -4,6 +4,7 @@ using ActivityCheckerApi.Models.Services;
 using ActivityCheckerApi.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -29,7 +30,8 @@ namespace ActivityCheckerApi.Controllers
 		{
 			User? result = await vm.Login(DTO);
 			if (result == null) return BadRequest("Login failed");
-			var token = tokenService.GenerateAccessToken(result);
+			string? tabletRole = result.Roles.FirstOrDefault("Tablet");
+			var token = tokenService.GenerateAccessToken(result, tabletRole == null ? 7 : 30);
 			return Ok(new { AccessToken = new JwtSecurityTokenHandler().WriteToken(token) });
 		}
 
